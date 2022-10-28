@@ -11,7 +11,7 @@ import { Button } from './components/Button';
 export function App() {
   return (
     <div className='w-screen h-screen bg-gray-900 flex flex-col items-center justify-center text-gray-100'>
-      <div className='bg-gray-700'>
+      <div className='bg-gray-700 w-[40rem] h-[46rem]'>
         <header className='flex flex-col items-center mt-8'>
           <Logo/>
 
@@ -21,50 +21,47 @@ export function App() {
 
           <Text size='sm' className='text-gray-400 mt-1'>Faça o login e comece a usar!</Text>
         </header>
-        <body>
-          <form className='flex flex-col items-stretch max-w-sm mt-8 gap-4 ml-20 mr-20'>
-            <label htmlFor="email" className='flex flex-col gap-3'>
-              <Text className='font-semibold'>Endereço de e-mail</Text>
-              <TextInput.Root>
-                <TextInput.Icon>
-                  <Envelope/>
-                </TextInput.Icon>
+        <form className='flex flex-col items-stretch max-w-sm mt-8 gap-4 ml-32'>
+          <label htmlFor="email" className='flex flex-col gap-3'>
+            <Text className='font-semibold'>Endereço de e-mail</Text>
+            <TextInput.Root>
+              <TextInput.Icon>
+                <Envelope/>
+              </TextInput.Icon>
 
-              <TextInput.Input type='email' id='email' placeholder='Digite seu email'/>
-              </TextInput.Root>
+            <TextInput.Input type='email' id='email' placeholder='Digite seu email'/>
+            </TextInput.Root>
 
-            </label>
+          </label>
 
-            <label htmlFor="password" className='flex flex-col gap-3'>
-              <Text className='font-semibold'>Sua senha</Text>
-              <TextInput.Root>
-                <TextInput.Icon>
-                  <Lock/>
-                </TextInput.Icon>
+          <label htmlFor="password" className='flex flex-col gap-3'>
+            <Text className='font-semibold'>Sua senha</Text>
+            <TextInput.Root>
+              <TextInput.Icon>
+                <Lock/>
+              </TextInput.Icon>
 
-              <TextInput.Input type='password' id='password' placeholder='************'/>
-              </TextInput.Root>
+            <TextInput.Input type='password' id='password' placeholder='************'/>
+            </TextInput.Root>
 
-            </label>
+          </label>
 
-            <label htmlFor='remember' className='flex items-center gap-2'>
-              <Checkbox id='remember'/>
-              <Text size='sm' className='text-gray-200'>Lembrar de mim por 30 dias</Text>
-            </label>
+          <label htmlFor='remember' className='flex items-center gap-2'>
+            <Checkbox id='remember'/>
+            <Text size='sm' className='text-gray-200'>Lembrar de mim por 30 dias</Text>
+          </label>
 
-            <Button type='submit' className='mt-4'>Entrar na plataforma</Button>
-          </form>
-          <div className='flex flex-col items-center mt-6 '>
-            <a href="" className='mb-4'>
-              <Text size='sm'  className='underline text-gray-400'>Esqueceu sua senha?</Text>
-            </a>
-
-            <a href="" className='mb-10'>
-              <Text size='sm' className='underline text-gray-400'>Não tem uma conta? Crie uma agora!</Text>
-            </a>
-          </div>
-        </body>
-      </div>
+          <Button type='submit' className='mt-4'>Entrar na plataforma</Button>
+        </form>
+        <footer className='flex flex-col items-center mt-8 gap-4'>
+          <Text asChild size='sm'>
+            <a href='' className='underline text-gray-400 hover:text-gray-200'>Esqueceu sua senha?</a>
+          </Text>
+          <Text  asChild size='sm'>
+            <a href="" className='underline text-gray-400 transition-colors hover:text-gray-200'>Não tem uma conta? Crie uma agora!</a>
+          </Text>
+        </footer>
+    </div>
     </div>
   )
 }
